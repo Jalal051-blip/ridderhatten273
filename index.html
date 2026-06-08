@@ -263,6 +263,17 @@
       color: #fff; font-size: 2.2rem; cursor: pointer;
       background: none; border: none; line-height: 1;
     }
+    .lb-arrow {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      background: rgba(255,255,255,0.12);
+      border: none; color: #fff; font-size: 1.8rem;
+      width: 52px; height: 52px; border-radius: 50%;
+      cursor: pointer; transition: background .2s;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .lb-arrow:hover { background: rgba(255,255,255,0.28); }
+    .lb-prev { left: 20px; }
+    .lb-next { right: 20px; }
 
     /* ── DETAILS TABLE ── */
     .details-grid {
@@ -660,12 +671,20 @@
 <!-- LIGHTBOX -->
 <div id="lightbox" onclick="closeLightbox()">
   <button id="lightbox-close" onclick="closeLightbox()">&times;</button>
-  <img id="lightbox-img" src="" alt="Billede" />
+  <button class="lb-arrow lb-prev" onclick="event.stopPropagation(); lbNav(-1)">&#8592;</button>
+  <img id="lightbox-img" src="" alt="Billede" onclick="event.stopPropagation()" />
+  <button class="lb-arrow lb-next" onclick="event.stopPropagation(); lbNav(1)">&#8594;</button>
 </div>
 
 <script>
+  const galleryImgs = Array.from(document.querySelectorAll('.gallery-grid img'));
+  let lbIndex = 0;
+
   function openLightbox(src) {
-    document.getElementById('lightbox-img').src = src;
+    lbIndex = galleryImgs.findIndex(img => img.src === src || img.getAttribute('src') === src ||
+      img.src.endsWith(src.split('/').pop()));
+    if (lbIndex < 0) lbIndex = 0;
+    document.getElementById('lightbox-img').src = galleryImgs[lbIndex].src;
     document.getElementById('lightbox').classList.add('open');
     document.body.style.overflow = 'hidden';
   }
@@ -673,7 +692,15 @@
     document.getElementById('lightbox').classList.remove('open');
     document.body.style.overflow = '';
   }
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+  function lbNav(dir) {
+    lbIndex = (lbIndex + dir + galleryImgs.length) % galleryImgs.length;
+    document.getElementById('lightbox-img').src = galleryImgs[lbIndex].src;
+  }
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape')     closeLightbox();
+    if (e.key === 'ArrowRight') lbNav(1);
+    if (e.key === 'ArrowLeft')  lbNav(-1);
+  });
 
   // Slideshow
   const slides = document.querySelectorAll('#slideshow img');
