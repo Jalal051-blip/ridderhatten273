@@ -599,7 +599,7 @@
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 
   // Kort
-  const map = L.map('map', { zoomControl: true, scrollWheelZoom: false }).setView([55.3697, 10.4397], 15);
+  const map = L.map('map', { zoomControl: true, scrollWheelZoom: false }).setView([55.3714, 10.4603], 15);
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
     maxZoom: 19
@@ -620,7 +620,7 @@
     popupAnchor: [0, -48]
   });
 
-  L.marker([55.3697, 10.4397], { icon })
+  L.marker([55.3714, 10.4603], { icon })
     .addTo(map)
     .bindPopup(`<div class="map-popup">
       <strong>Ridderhatten 273</strong>
