@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="da">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ridderhatten 273 – Villa til salg i Odense</title>
-  <meta name="description" content="Flot villa til salg i Odense. 131 m², 4 værelser, stor have. Pris: 3.595.000 kr. Kontakt Bilal Anwari." />
+  <title>Ridderhatten 273 â€“ Villa til salg i Odense</title>
+  <meta name="description" content="Flot villa til salg i Odense. 131 mÂ², 4 vÃ¦relser, stor have. Pris: 3.495.000 kr. Kontakt Bilal Anwari." />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <style>
@@ -29,7 +29,7 @@
       line-height: 1.6;
     }
 
-    /* ── NAV ── */
+    /* â”€â”€ NAV â”€â”€ */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       background: rgba(30,30,30,0.88);
@@ -52,7 +52,7 @@
     }
     nav a:hover { color: #fff; }
 
-    /* ── HERO ── */
+    /* â”€â”€ HERO â”€â”€ */
     .hero {
       position: relative;
       height: 100svh;
@@ -133,7 +133,7 @@
       animation: bounce 2s infinite;
     }
     .hero-scroll::after {
-      content: '↓';
+      content: 'â†“';
       display: block;
       font-size: 1.3rem;
       margin-top: 4px;
@@ -143,7 +143,7 @@
       50%      { transform: translateX(-50%) translateY(6px); }
     }
 
-    /* ── STATS BAR ── */
+    /* â”€â”€ STATS BAR â”€â”€ */
     .stats {
       background: var(--clay);
       color: #fff;
@@ -171,7 +171,7 @@
       letter-spacing: 0.06em;
     }
 
-    /* ── SECTIONS ── */
+    /* â”€â”€ SECTIONS â”€â”€ */
     section {
       max-width: 1100px;
       margin: 0 auto;
@@ -192,7 +192,7 @@
       line-height: 1.2;
     }
 
-    /* ── HIGHLIGHTS ── */
+    /* â”€â”€ HIGHLIGHTS â”€â”€ */
     .highlights-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -219,7 +219,7 @@
       color: var(--mid);
     }
 
-    /* ── GALLERY ── */
+    /* â”€â”€ GALLERY â”€â”€ */
     #galleri { padding-top: 0; }
     .gallery-grid {
       display: grid;
@@ -245,7 +245,7 @@
       box-shadow: 0 8px 28px rgba(0,0,0,0.18);
     }
 
-    /* ── LIGHTBOX ── */
+    /* â”€â”€ LIGHTBOX â”€â”€ */
     #lightbox {
       display: none;
       position: fixed; inset: 0; z-index: 999;
@@ -275,7 +275,7 @@
     .lb-prev { left: 20px; }
     .lb-next { right: 20px; }
 
-    /* ── DETAILS TABLE ── */
+    /* â”€â”€ DETAILS TABLE â”€â”€ */
     .details-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -301,7 +301,7 @@
       .details-grid { grid-template-columns: 1fr; }
     }
 
-    /* ── MAP ── */
+    /* â”€â”€ MAP â”€â”€ */
     .map-container {
       border-radius: var(--radius);
       overflow: hidden;
@@ -318,7 +318,7 @@
     .map-popup strong { display: block; font-size: 1rem; color: var(--dark); }
     .map-popup span { font-size: 0.85rem; color: var(--mid); }
 
-    /* ── CONTACT ── */
+    /* â”€â”€ CONTACT â”€â”€ */
     #kontakt { background: #1e1e1e; max-width: 100%; }
     #kontakt > .inner {
       max-width: 1100px; margin: 0 auto; padding: 72px 28px;
@@ -385,7 +385,7 @@
       #kontakt > .inner { grid-template-columns: 1fr; gap: 40px; }
     }
 
-    /* ── FOOTER ── */
+    /* â”€â”€ FOOTER â”€â”€ */
     footer {
       background: #141414;
       color: rgba(255,255,255,0.35);
@@ -394,7 +394,7 @@
       font-size: 0.8rem;
     }
 
-    /* ── RESPONSIVE ── */
+    /* â”€â”€ RESPONSIVE â”€â”€ */
     @media (max-width: 600px) {
       .hero-overlay { padding: 40px 22px; }
       nav .links { display: none; }
@@ -417,94 +417,94 @@
   <div class="slide-dots" id="dots"></div>
   <div class="hero-overlay">
     <span class="hero-tag">Til salg</span>
-    <h1>Ridderhatten 273<br>5220 Odense SØ</h1>
-    <p class="price">3.595.000 kr.</p>
+    <h1>Ridderhatten 273<br>5220 Odense SÃ˜</h1>
+    <p class="price">3.495.000 kr.</p>
   </div>
   <div class="hero-scroll">Scroll</div>
 </div>
 
 <!-- STATS BAR -->
 <div class="stats">
-  <div class="stat"><div class="stat-value">131</div><div class="stat-label">m² bolig</div></div>
-  <div class="stat"><div class="stat-value">4</div><div class="stat-label">Værelser</div></div>
-  <div class="stat"><div class="stat-value">1983</div><div class="stat-label">Byggeår</div></div>
-  <div class="stat"><div class="stat-value">C</div><div class="stat-label">Energimærke</div></div>
-  <div class="stat"><div class="stat-value">3.595.000</div><div class="stat-label">Pris kr.</div></div>
+  <div class="stat"><div class="stat-value">131</div><div class="stat-label">mÂ² bolig</div></div>
+  <div class="stat"><div class="stat-value">4</div><div class="stat-label">VÃ¦relser</div></div>
+  <div class="stat"><div class="stat-value">1983</div><div class="stat-label">ByggeÃ¥r</div></div>
+  <div class="stat"><div class="stat-value">C</div><div class="stat-label">EnergimÃ¦rke</div></div>
+  <div class="stat"><div class="stat-value">3.495.000</div><div class="stat-label">Pris kr.</div></div>
 </div>
 
 <!-- OM HUSET -->
 <section id="om">
   <p class="section-label">Boligen</p>
-  <h2>En rolig villa i hjertet af Odense SØ</h2>
+  <h2>En rolig villa i hjertet af Odense SÃ˜</h2>
   <p style="color:var(--mid); font-size:1.05rem; max-width:780px; margin-bottom:12px;">
-    På Ridderhatten i Odense SØ finder du denne flot moderniserede villa, roligt placeret på et lukket og børnevenligt vænge.
-    Her får du en veldisponeret bolig med gode opholdsrum og en grøn og solrig have.
+    PÃ¥ Ridderhatten i Odense SÃ˜ finder du denne flot moderniserede villa, roligt placeret pÃ¥ et lukket og bÃ¸rnevenligt vÃ¦nge.
+    Her fÃ¥r du en veldisponeret bolig med gode opholdsrum og en grÃ¸n og solrig have.
   </p>
   <p style="color:var(--mid); font-size:1.05rem; max-width:780px; margin-bottom:12px;">
-    Villaen er opført i 1983 og rummer 131 m² boligareal samt 17 m² overdækket terrasse og 24 m² carport/redskabsrum.
-    Boligen er løbende moderniseret med følgende:
+    Villaen er opfÃ¸rt i 1983 og rummer 131 mÂ² boligareal samt 17 mÂ² overdÃ¦kket terrasse og 24 mÂ² carport/redskabsrum.
+    Boligen er lÃ¸bende moderniseret med fÃ¸lgende:
   </p>
   <ul style="color:var(--mid); font-size:1.05rem; max-width:780px; margin-bottom:12px; padding-left:24px; line-height:2;">
     <li>Nyere tag fra 2018</li>
-    <li>Nyere køkken fra 2018</li>
-    <li>Badeværelse fra 2018</li>
-    <li>Gæstetoilet fra 2026</li>
+    <li>Nyere kÃ¸kken fra 2018</li>
+    <li>BadevÃ¦relse fra 2018</li>
+    <li>GÃ¦stetoilet fra 2026</li>
     <li>Vinduer fra 2003/2021</li>
-    <li>Flotte nyere trægulv fra 2023/2024 i de fleste rum</li>
+    <li>Flotte nyere trÃ¦gulv fra 2023/2024 i de fleste rum</li>
   </ul>
   <p style="color:var(--mid); font-size:1.05rem; max-width:780px; margin-bottom:12px;">
-    Indretningen giver en naturlig sammenhæng mellem køkken, opholdsrum og terrasse, hvilket skaber gode rammer for både
-    familieliv og afslappede stunder. Haven giver plads til udeliv, hyggekroge og ophold i det fri, mens den overdækkede
-    terrasse forlænger sæsonen og gør udearealet anvendeligt i hverdagen.
+    Indretningen giver en naturlig sammenhÃ¦ng mellem kÃ¸kken, opholdsrum og terrasse, hvilket skaber gode rammer for bÃ¥de
+    familieliv og afslappede stunder. Haven giver plads til udeliv, hyggekroge og ophold i det fri, mens den overdÃ¦kkede
+    terrasse forlÃ¦nger sÃ¦sonen og gÃ¸r udearealet anvendeligt i hverdagen.
   </p>
   <p style="color:var(--mid); font-size:1.05rem; max-width:780px; margin-bottom:48px;">
-    Varmekilde: fjernvarme – sælgers varmeforbrug var i 2025 kr. 11.666.
+    Varmekilde: fjernvarme â€“ sÃ¦lgers varmeforbrug var i 2025 kr. 11.666.
   </p>
 
   <div class="highlights-grid">
     <div class="highlight-card">
-      <div class="icon">🌲</div>
+      <div class="icon">ðŸŒ²</div>
       <h3>Natur, skov og legepladser</h3>
-      <p>Hollufgård Skov og Hjallese Hegning <strong>1,5 km</strong> væk med naturskønne stier – og gode legepladser og grønne arealer i nærområdet.</p>
+      <p>HollufgÃ¥rd Skov og Hjallese Hegning <strong>1,5 km</strong> vÃ¦k med naturskÃ¸nne stier â€“ og gode legepladser og grÃ¸nne arealer i nÃ¦romrÃ¥det.</p>
     </div>
     <div class="highlight-card">
-      <div class="icon">🏫</div>
+      <div class="icon">ðŸ«</div>
       <h3>Skole og gymnasium</h3>
-      <p>Tornbjerg Gymnasium <strong>250 m</strong> væk og Tornbjerg Skole <strong>900 m</strong> – begge på gå- og cykelafstand.</p>
+      <p>Tornbjerg Gymnasium <strong>250 m</strong> vÃ¦k og Tornbjerg Skole <strong>900 m</strong> â€“ begge pÃ¥ gÃ¥- og cykelafstand.</p>
     </div>
     <div class="highlight-card">
-      <div class="icon">🛍️</div>
-      <h3>Indkøb og byliv</h3>
-      <p>Dagligvarebutikker <strong>370 m</strong> væk og Rosengårdscenteret – Danmarks største shoppingcenter – <strong>3,5 km</strong>.</p>
+      <div class="icon">ðŸ›ï¸</div>
+      <h3>IndkÃ¸b og byliv</h3>
+      <p>Dagligvarebutikker <strong>370 m</strong> vÃ¦k og RosengÃ¥rdscenteret â€“ Danmarks stÃ¸rste shoppingcenter â€“ <strong>3,5 km</strong>.</p>
     </div>
     <div class="highlight-card">
-      <div class="icon">🏥</div>
+      <div class="icon">ðŸ¥</div>
       <h3>Dagsinstitution og fritid</h3>
-      <p>Dagsinstitution <strong>260 m</strong> væk – og et bredt udvalg af fritidsaktiviteter i området til alle aldersgrupper.</p>
+      <p>Dagsinstitution <strong>260 m</strong> vÃ¦k â€“ og et bredt udvalg af fritidsaktiviteter i omrÃ¥det til alle aldersgrupper.</p>
     </div>
     <div class="highlight-card">
-      <div class="icon">🚌</div>
+      <div class="icon">ðŸšŒ</div>
       <h3>Gode transportmuligheder</h3>
-      <p>Busstoppested <strong>130 m</strong> fra døren – nem daglig transport uden bil, og Odense centrum på cykel.</p>
+      <p>Busstoppested <strong>130 m</strong> fra dÃ¸ren â€“ nem daglig transport uden bil, og Odense centrum pÃ¥ cykel.</p>
     </div>
   </div>
 </section>
 
 <!-- DETALJER -->
 <section id="detaljer">
-  <p class="section-label">Nøgletal</p>
+  <p class="section-label">NÃ¸gletal</p>
   <h2>Boligoplysninger</h2>
   <div class="details-grid">
     <div class="detail-row"><span class="key">Adresse</span><span class="val">Ridderhatten 273</span></div>
-    <div class="detail-row"><span class="key">Postnummer / by</span><span class="val">5220 Odense SØ</span></div>
+    <div class="detail-row"><span class="key">Postnummer / by</span><span class="val">5220 Odense SÃ˜</span></div>
     <div class="detail-row"><span class="key">Boligtype</span><span class="val">Villa</span></div>
-    <div class="detail-row"><span class="key">Byggeår</span><span class="val">1983</span></div>
-    <div class="detail-row"><span class="key">Boligareal</span><span class="val">131 m²</span></div>
-    <div class="detail-row"><span class="key">Antal værelser</span><span class="val">4</span></div>
-    <div class="detail-row"><span class="key">Energimærke</span><span class="val">C</span></div>
+    <div class="detail-row"><span class="key">ByggeÃ¥r</span><span class="val">1983</span></div>
+    <div class="detail-row"><span class="key">Boligareal</span><span class="val">131 mÂ²</span></div>
+    <div class="detail-row"><span class="key">Antal vÃ¦relser</span><span class="val">4</span></div>
+    <div class="detail-row"><span class="key">EnergimÃ¦rke</span><span class="val">C</span></div>
     <div class="detail-row"><span class="key">Antal toiletter</span><span class="val">2</span></div>
     <div class="detail-row"><span class="key">Varme</span><span class="val">Fjernvarme</span></div>
-    <div class="detail-row"><span class="key">Kontantpris</span><span class="val">3.595.000 kr.</span></div>
+    <div class="detail-row"><span class="key">Kontantpris</span><span class="val">3.495.000 kr.</span></div>
   </div>
 </section>
 
@@ -549,14 +549,14 @@
     <img src="images/28VID05000.jpg"       alt="Billede 31" onclick="openLightbox(this.src)" loading="lazy" />
     <img src="images/29VID05002.jpg"       alt="Billede 32" onclick="openLightbox(this.src)" loading="lazy" />
     <img src="images/31kort.jpg"           alt="Kort"       onclick="openLightbox(this.src)" loading="lazy" />
-    <img src="images/Skærmbillede 2026-06-16 200107.jpg" alt="Plantegning" onclick="openLightbox(this.src)" loading="lazy" />
+    <img src="images/SkÃ¦rmbillede 2026-06-16 200107.jpg" alt="Plantegning" onclick="openLightbox(this.src)" loading="lazy" />
   </div>
 </section>
 
 <!-- BELIGGENHED -->
 <section id="beliggenhed">
   <p class="section-label">Beliggenhed</p>
-  <h2>Ridderhatten 273, Odense SØ</h2>
+  <h2>Ridderhatten 273, Odense SÃ˜</h2>
   <div class="map-container">
     <div id="map"></div>
   </div>
@@ -566,22 +566,22 @@
 <div id="kontakt">
   <div class="inner">
     <div>
-      <p class="section-label" style="color:rgba(255,255,255,0.45);">Sælger</p>
+      <p class="section-label" style="color:rgba(255,255,255,0.45);">SÃ¦lger</p>
       <h2>Interesseret? Kontakt os</h2>
       <div class="contact-info">
         <a href="tel:23906021">
-          <span class="ci-icon">📞</span>
+          <span class="ci-icon">ðŸ“ž</span>
           <div><div class="ci-label">Telefon</div><div class="ci-val">23 90 60 21</div></div>
         </a>
         <a href="mailto:Bilal.anwari@hotmail.com">
-          <span class="ci-icon">✉️</span>
+          <span class="ci-icon">âœ‰ï¸</span>
           <div><div class="ci-label">E-mail</div><div class="ci-val">Bilal.anwari@hotmail.com</div></div>
         </a>
       </div>
       <div style="display:flex; align-items:center; gap:14px; background:rgba(255,255,255,0.07); border-radius:var(--radius); padding:18px 22px; margin-top:12px;">
         <div style="width:44px; height:44px; border-radius:50%; background:var(--clay); display:flex; align-items:center; justify-content:center; font-size:1.2rem; font-weight:700; color:#fff; flex-shrink:0;">B</div>
         <div>
-          <div style="font-size:0.72rem; color:rgba(255,255,255,0.45); text-transform:uppercase; letter-spacing:0.08em;">Sælger</div>
+          <div style="font-size:0.72rem; color:rgba(255,255,255,0.45); text-transform:uppercase; letter-spacing:0.08em;">SÃ¦lger</div>
           <div style="color:#fff; font-weight:600; font-size:1rem;">Bilal Anwari</div>
         </div>
       </div>
@@ -591,7 +591,7 @@
         <input type="text" name="navn" placeholder="Dit navn" required />
         <input type="tel" name="tlf" placeholder="Dit telefonnummer" />
         <input type="email" name="email" placeholder="Din e-mail" required />
-        <textarea name="besked" placeholder="Skriv en besked – f.eks. hvornår du gerne vil se huset…"></textarea>
+        <textarea name="besked" placeholder="Skriv en besked â€“ f.eks. hvornÃ¥r du gerne vil se husetâ€¦"></textarea>
         <button type="submit" class="btn">Send besked</button>
       </form>
     </div>
@@ -599,7 +599,7 @@
 </div>
 
 <footer>
-  &copy; 2026 · Ridderhatten 273, 5220 Odense SØ
+  &copy; 2026 Â· Ridderhatten 273, 5220 Odense SÃ˜
 </footer>
 
 <!-- LIGHTBOX -->
@@ -684,14 +684,14 @@
     .addTo(map)
     .bindPopup(`<div class="map-popup">
       <strong>Ridderhatten 273</strong>
-      <span>5220 Odense SØ</span>
+      <span>5220 Odense SÃ˜</span>
     </div>`)
     .openPopup();
 
   function sendMail(e) {
     e.preventDefault();
     const f = e.target;
-    const subject = encodeURIComponent('Forespørgsel – Ridderhatten 273');
+    const subject = encodeURIComponent('ForespÃ¸rgsel â€“ Ridderhatten 273');
     const body = encodeURIComponent(
       'Navn: ' + f.navn.value + '\n' +
       'Tlf: ' + f.tlf.value + '\n\n' +
